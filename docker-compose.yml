@@ -26,6 +26,7 @@ services:
             - ./db:/docker-entrypoint-initdb.d/init.sql
         networks:
             - app-node-network
+            - pg-admin-network
 
     nginx:
         image: nginx:alpine
@@ -41,4 +42,6 @@ services:
 
 networks:
     app-node-network:
+        driver: bridge
+    pg-admin-network:
         driver: bridge
