@@ -2,7 +2,7 @@
     "name": "second-test-project",
     "version": "1.0.0",
     "description": "Create a simple server",
-    "type": "module",
+    "type": "commonjs",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,8 @@
     "license": "ISC",
     "dependencies": {
         "dotenv": "^16.4.5",
-        "eslint": "^9.12.0"
+        "eslint": "^9.12.0",
+        "express": "^4.21.1"
     },
     "devDependencies": {
         "nodemon": "^3.1.7"
