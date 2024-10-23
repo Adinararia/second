@@ -8,11 +8,12 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Копируем код приложения
-COPY . .
+# Копируем код приложения, это в случае деплоя в прод нужная штука, если дев то volumes
+# COPY . .
 
 # Приложение будет слушать на порту 3000
 EXPOSE 3000
 
 # Запуск приложения
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+CMD [ "npm", "run", "dev"]
